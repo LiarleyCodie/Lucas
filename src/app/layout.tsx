@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from 'next-themes'
+import clsx from "clsx";
 import Navbar from '@/app/components/Navbar'
 import Footer from '@/app/components/Footer'
 import "./globals.css";
@@ -19,7 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={dmSans.className + ' dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100'}>
+      <body className={clsx(dmSans.className, 'dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 grid grid-rows-[4rem_1fr_4rem]',
+                           'min-h-screen')}>
         <ThemeProvider>
           <Navbar />
           {children}

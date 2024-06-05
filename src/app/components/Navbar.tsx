@@ -11,7 +11,7 @@ const Navbar: FC = () => {
     >
       <a href='/' 
         className={clsx('text-xl font-semibold')}
-      >Lucas</a>
+      >Tiubira</a>
 
       <ul className={clsx('ml-auto')}>
         <NavLink href='/'>Início</NavLink>
